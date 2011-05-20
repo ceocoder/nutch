@@ -191,5 +191,7 @@ implements Mapper<Text, Writable, Text, NutchWritable>,
     job.setOutputKeyClass(Text.class);
     job.setMapOutputValueClass(NutchWritable.class);
     job.setOutputValueClass(NutchWritable.class);
+
+    job.setNumReduceTasks(10); //change to whatever - even make it come from cmdline args
   }
 }
